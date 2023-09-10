@@ -1,4 +1,4 @@
-def shlyah (n):    #mod.py
+def shlyah (n):    
   if n == 1 :
     result = 10
   else:
