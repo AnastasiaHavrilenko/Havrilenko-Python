@@ -1,6 +1,6 @@
 def add_element():
 
-    A = list(map(int,input('Введіть список елементів: ').split()))
+    A = list(map(int,input('Введіть список елементів: ').split())) # Розділити введений рядок на список
 
     print(A)
 
