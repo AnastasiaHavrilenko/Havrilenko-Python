@@ -1,3 +1,4 @@
+import string
 try:
   # Створення текстового файлу TF4_1
   with open("TF4_1.txt", "w") as file:
@@ -9,7 +10,7 @@ try:
   word_lengths = {}
   with open("TF4_1.txt", "r") as file:
       for line in file:
-          words = line.split()
+          words = line.translate(str.maketrans("", "", string.punctuation)).split()
           for word in words:
               word_length = len(word)
               if word_length in word_lengths:
