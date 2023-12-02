@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Ukraine",
+    "area": 603500,
+    "population": 41879916,
+    "region": "Europe"
+  },
+  {
+    "name": "Austria",
+    "area": 83871,
+    "population": 8800000,
+    "region": "Europe"
+  },
+  {
+    "name": "Bulgaria",
+    "area": 110879,
+    "population": 7100000,
+    "region": "Europe"
+  },
+  {
+    "name": "\u0421hina",
+    "area": 9598100,
+    "population": 1735735724,
+    "region": "Africa"
+  },
+  {
+    "name": "Gabon",
+    "area": 267667,
+    "population": 2000000,
+    "region": "Africa"
+  },
+  {
+    "name": "Spain",
+    "area": 505370,
+    "population": 46600000,
+    "region": "Europe"
+  },
+  {
+    "name": "Egypt",
+    "area": 1001450,
+    "population": 93400000,
+    "region": "Africa"
+  },
+  {
+    "name": "Cuba",
+    "area": 110860,
+    "population": 11300000,
+    "region": "North America"
+  },
+  {
+    "name": "Germany",
+    "area": 357121,
+    "population": 83100000,
+    "region": "Europe"
+  },
+  {
+    "name": "Estonia",
+    "area": 37586,
+    "population": 385762,
+    "region": "Europe"
+  }
+]
