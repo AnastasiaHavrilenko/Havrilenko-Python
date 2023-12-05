@@ -1,0 +1,26 @@
+[
+  {
+    "name": "China",
+    "area": 9598100,
+    "population": 1735735724,
+    "region": "Africa"
+  },
+  {
+    "name": "Gabon",
+    "area": 267667,
+    "population": 2000000,
+    "region": "Africa"
+  },
+  {
+    "name": "Egypt",
+    "area": 1001450,
+    "population": 93400000,
+    "region": "Africa"
+  },
+  {
+    "name": "Morocco",
+    "area": 446550,
+    "population": 35100000,
+    "region": "Africa"
+  }
+]
