@@ -50,15 +50,17 @@ def search_by_name(json_file, country_name):
         print("File not found or empty.")
 
 def countries_in_region(json_file):
-    data = load_data(json_file)
-    if data:
-        countries_in_africa_asia = [entry['name'] for entry in data if entry['region'] in ['Africa', 'Asia']]
-        if countries_in_africa_asia:
-            print(f"Countries in Africa or Asia: {', '.join(countries_in_africa_asia)}")
-        else:
-            print("No countries found in Africa or Asia.")
-    else:
-        print("File not found or empty.")
+  data = load_data(json_file)
+  if data:
+      countries_in_africa_asia = [entry for entry in data if entry['region'] in ['Africa', 'Asia']]
+      return countries_in_africa_asia
+  else:
+      print("File not found or empty.")
+      return []
+
+def save_filtered_data_to_file(filtered_data, new_file):
+  with open(new_file, 'w') as file:
+      json.dump(filtered_data, file, indent=2)
 
 def main_menu():
     print("1. View JSON file")
@@ -69,6 +71,8 @@ def main_menu():
     print("6. Exit")
 
 json_file = "countries.json"
+filtered_json_file = "filtered.json"
+
 
 # Load initial data
 countries_data = [
@@ -102,6 +106,7 @@ while True:
             "region": input("Enter region: "),
         }
         add_entry(json_file, new_entry)
+      
     elif choice == "3":
       entry_name = input("Enter the name of the entry to delete: ")
       entry_to_delete = next((entry for entry in countries_data if entry['name'] == 
@@ -110,11 +115,20 @@ while True:
           delete_entry(json_file, entry_to_delete)
       else:
           print("Entry not found.")
+        
     elif choice == "4":
         country_name = input("Enter country name: ")
         search_by_name(json_file, country_name)
+      
     elif choice == "5":
-        countries_in_region(json_file)
+        filtered_data = countries_in_region(json_file)
+        if filtered_data:
+           print(f"Countries in Africa or Asia: {', '.join(entry['name'] for entry in filtered_data)}")
+           save_filtered_data_to_file(filtered_data, filtered_json_file)
+           print(f"Filtered data saved to {filtered_json_file}")
+        else:
+           print("No countries found in Africa or Asia.")
+      
     elif choice == "6":
         break
     else:
