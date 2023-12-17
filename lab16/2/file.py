@@ -10,7 +10,7 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 
 # Зчитування тексту з файлу
-input_file_path = 'ваш_файл.txt'
+input_file_path = 'lab16.txt'
 with open(input_file_path, 'r', encoding='utf-8') as file:
     original_text = file.read()
 
@@ -33,6 +33,6 @@ filtered_tokens = [token for token in lemmatized_tokens if token.lower() not in 
 filtered_tokens = [token for token in filtered_tokens if token not in string.punctuation]
 
 # Запис обробленого тексту у інший файл
-output_file_path = 'оброблений_текст.txt'
+output_file_path = 'new.txt'
 with open(output_file_path, 'w', encoding='utf-8') as file:
     file.write(' '.join(filtered_tokens))
